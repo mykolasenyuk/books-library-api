@@ -8,6 +8,7 @@ mongoose
   .connect(DB_HOST, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    authSource: 'admin',
   })
   .then(() => {
     app.listen(PORT)

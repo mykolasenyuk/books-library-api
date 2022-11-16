@@ -11,6 +11,7 @@ const addBook = async (req, res, next) => {
     }
 
     const newBook = { ...req.body }
+    console.log(req.body);
     const result = await Book.create(newBook)
     res.status(201).json({
       status: 'sucess',
